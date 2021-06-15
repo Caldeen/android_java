@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">MEETING APP</string>
+    <string name="hello_world">Hello world</string>
+    <string name="nightMode">Dark Theme</string>
+    <string name="dayMode">Light Theme</string>
+    <string name="passHint">Password</string>
+    <string name="usernameHint">Login</string>
+    <string name="login">Log in</string>
+    <string name="register">Register</string>
+    <string name="meetingsTitle">YOUR MEETINGS</string>
+    <string name="failedLoginError">Not found, try again!</string>
+    <string name="fieldRequired">Field is required</string>
+    <string name="registerTitle">Register</string>
+    <string name="languagesetting">Language EN/PL</string>
+    <string name="settingsTitle">Settings</string>
+    <string name="nameHint">First Name</string>
+    <string name="lastNameHint">Last Name</string>
+    <string name="userData">User data</string>
+    <string name="userBirthDate">Date of birth</string>
+    <string name="birthDay">Day</string>
+    <string name="birthMonth">Month</string>
+    <string name="birthYear">Year</string>
+    <string name="accData">Account data</string>
+    <string name="phoneNumber">Phone number</string>
+    <string name="wrongNumber">Wrong number</string>
+</resources>

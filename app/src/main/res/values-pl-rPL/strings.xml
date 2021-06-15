@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="passHint">Hasło</string>
+    <string name="usernameHint">Login</string>
+    <string name="login">Zaloguj</string>
+    <string name="register">Zarejestruj</string>
+    <string name="meetingsTitle">TWOJE SPOTKANIA</string>
+    <string name="failedLoginError">Nie znaleziono, spróbuj ponownie</string>
+    <string name="fieldRequired">Pole jest wymagane</string>
+    <string name="registerTitle">Rejestracja</string>
+    <string name="languagesetting">Język EN/PL</string>
+    <string name="settingsTitle">Ustawienia</string>
+    <string name="nameHint">Imię</string>
+    <string name="lastNameHint">Nazwisko</string>
+    <string name="userData">Dane użytkownika</string>
+    <string name="userBirthDate">Data urodzenia</string>
+    <string name="birthDay">Dzień</string>
+    <string name="birthMonth">Miesiąc</string>
+    <string name="birthYear">Rok</string>
+    <string name="accData">Dane konta</string>
+    <string name="phoneNumber">Numer telefonu</string>
+    <string name="wrongNumber">Zła wartość</string>
+</resources>
