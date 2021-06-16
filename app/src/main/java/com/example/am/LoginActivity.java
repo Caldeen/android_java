@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         SharedPrefsHandler.setToken(LoginActivity.this,response.headers().get("SESSION"));
                         SharedPrefsHandler.logPrefs(LoginActivity.this);
-                        Intent nextScreen = new Intent(getApplicationContext(), SettingsActivity.class);
+                        Intent nextScreen = new Intent(getApplicationContext(), MeetingsActivity.class);
                         startActivity(nextScreen);
                     }
 

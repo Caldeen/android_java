@@ -20,4 +20,8 @@
     <string name="accData">Dane konta</string>
     <string name="phoneNumber">Numer telefonu</string>
     <string name="wrongNumber">Zła wartość</string>
+    <string name="deleteMeeting">Usuń</string>
+    <string name="alertTitle">Usunąć spotkanie?</string>
+    <string name="negative">Nie</string>
+    <string name="positive">Tak</string>
 </resources>

@@ -23,4 +23,8 @@
     <string name="accData">Account data</string>
     <string name="phoneNumber">Phone number</string>
     <string name="wrongNumber">Wrong number</string>
+    <string name="deleteMeeting">Delete</string>
+    <string name="alertTitle">Delete meeting?</string>
+    <string name="negative">No</string>
+    <string name="positive">Yes</string>
 </resources>

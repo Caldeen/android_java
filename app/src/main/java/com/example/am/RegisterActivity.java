@@ -128,5 +128,12 @@ public class RegisterActivity extends AppCompatActivity {
                 birthmonthText.getText().toString() + "-" +
                 birthDayText.getText().toString();
     }
+    @Override
+    protected void onRestart() {
+        recreate();
+        super.onRestart();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        Log.println(Log.INFO, "info", "restarted");
+    }
 }
 

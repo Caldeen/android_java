@@ -16,7 +16,8 @@ public class RetrofitClient {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation()
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().
+                setLenient()
                 .create();
 
         return new Retrofit.Builder()
