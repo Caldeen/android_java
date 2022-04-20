@@ -24,4 +24,7 @@
     <string name="alertTitle">Usunąć spotkanie?</string>
     <string name="negative">Nie</string>
     <string name="positive">Tak</string>
+    <string name="hello_world">Witaj swiat</string>
+    <string name="nightMode">Tryb Ciemny</string>
+    <string name="dayMode">Tryb jasny</string>
 </resources>

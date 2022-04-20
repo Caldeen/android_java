@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello_world">Witaj swiat</string>
-    <string name="nightMode">Tryb Ciemny</string>
-    <string name="dayMode">Tryb jasny</string>
-</resources>
