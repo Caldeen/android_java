@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import helpers.RetrofitClient;
@@ -19,11 +20,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
-    private ImageView loginImageView;
-    private ImageView registerImageView;
+    private Button loginImageView;
+    private Button registerImageView;
     private TextInputEditText passwordTextField;
     private TextInputEditText usernameTextField;
     private ImageView settingsImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,8 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPrefsHandler.loadTheme(this);
         setContentView(R.layout.login_screen);
-        loginImageView = findViewById(R.id.imageView2);
-        registerImageView = findViewById(R.id.imageView);
+        loginImageView = findViewById(R.id.loginButtonView);
+        registerImageView = findViewById(R.id.registerButtonView);
         passwordTextField = findViewById(R.id.passwordTextField);
         usernameTextField = findViewById(R.id.usernameTextField);
         settingsImageView = findViewById(R.id.settingsImageView);
