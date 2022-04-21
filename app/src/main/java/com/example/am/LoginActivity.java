@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import helpers.RetrofitClient;
 import helpers.SharedPrefsHandler;
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputEditText passwordTextField;
     private TextInputEditText usernameTextField;
     private ImageView settingsImageView;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextField = findViewById(R.id.passwordTextField);
         usernameTextField = findViewById(R.id.usernameTextField);
         settingsImageView = findViewById(R.id.settingsImageView);
-        loginImageView.setOnClickListener(new View.OnClickListener() {
+        progressBar = findViewById(R.id.progressBar);
+
+        loginImageView.setOnClickListener(new Button.OnClickListener() {
 
             public void onClick(View v) {
                 if (usernameTextField.getText().toString().matches("")) {
@@ -51,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 UserService userService = RetrofitClient.getRetrofit().create(UserService.class);
                 Call<User> call = userService.login(new User(usernameTextField.getText().toString(), passwordTextField.getText().toString()));
+                progressBar.setVisibility(View.VISIBLE);
                 call.enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
@@ -59,9 +64,10 @@ public class LoginActivity extends AppCompatActivity {
                             usernameTextField.setError(getResources().getString(R.string.failedLoginError));
                             return;
                         }
-                        SharedPrefsHandler.setToken(LoginActivity.this,response.headers().get("SESSION"));
+                        SharedPrefsHandler.setToken(LoginActivity.this, response.headers().get("SESSION"));
                         SharedPrefsHandler.logPrefs(LoginActivity.this);
                         Intent nextScreen = new Intent(getApplicationContext(), MeetingsActivity.class);
+                        //progressBar.setVisibility(View.INVISIBLE);
                         startActivity(nextScreen);
                     }
 
@@ -69,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onFailure(Call<User> call, Throwable t) {
                         Log.println(Log.ERROR, "info", "failed Login" + t.getMessage());
                         Intent nextScreen = new Intent(getApplicationContext(), LoginActivity.class);
+//                        progressBar.setVisibility(View.INVISIBLE);
                         startActivity(nextScreen);
                     }
                 });
