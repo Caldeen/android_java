@@ -30,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -95,7 +95,7 @@
     <Button
         android:id="@+id/registerButtonView"
         android:layout_width="160dp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/register"
         app:icon="@drawable/register_vector"

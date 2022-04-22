@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         SharedPrefsHandler.loadTheme(this);
-        setContentView(R.layout.login_screen);
+        setContentView(R.layout.login_activity);
         loginImageView = findViewById(R.id.loginButtonView);
         registerImageView = findViewById(R.id.registerButtonView);
         passwordTextField = findViewById(R.id.passwordTextField);

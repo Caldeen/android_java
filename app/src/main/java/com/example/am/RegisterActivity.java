@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +20,7 @@ import retrofit2.Response;
 import services.UserService;
 
 public class RegisterActivity extends AppCompatActivity {
-    private ImageView imageView3;
+    private Button confirmRegisterButton;
     private TextInputEditText usernameText;
     private TextInputEditText passwordText;
     private TextInputEditText firstNameText;
@@ -34,9 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         SharedPrefsHandler.loadTheme(this);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.register_activity);
 
-        imageView3 = findViewById(R.id.imageView3);
+        confirmRegisterButton = findViewById(R.id.confirmRegister);
         usernameText = findViewById(R.id.loginText);
         passwordText = findViewById(R.id.passRegisterText);
         firstNameText = findViewById(R.id.firstNameText);
@@ -47,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
         phoneNumberText = findViewById(R.id.phoneNumberText);
 
 
-        imageView3.setOnClickListener(new View.OnClickListener() {
+        confirmRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isTextFieldEmpty(usernameText)) {

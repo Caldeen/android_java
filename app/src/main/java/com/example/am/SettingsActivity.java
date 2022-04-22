@@ -25,7 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPrefsHandler.loadTheme(SettingsActivity.this);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.settings_activity);
         button1 = findViewById(R.id.radio_button_1);
         button2 = findViewById(R.id.radio_button_2);
         switch1 = (SwitchMaterial) findViewById(R.id.switch1);
